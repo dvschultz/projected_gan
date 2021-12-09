@@ -409,7 +409,7 @@ def training_loop(
 
         # Evaluate metrics.
         # if (snapshot_data is not None) and (len(metrics) > 0):
-        if cur_tick and (snapshot_data is not None) and (len(metrics) > 0):
+        if cur_tick and (snapshot_data is not None) and metrics is not None and (len(metrics) > 0):
             if rank == 0:
                 print('Evaluating metrics...')
             for metric in metrics:
